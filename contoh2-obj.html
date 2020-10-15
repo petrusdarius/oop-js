@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COntoh 2 object</title>
+</head>
+<body>
+    <p>Nama Lengkap: <span id="namaLengkap"></span></p>
+    <p id='dataarray'></p>
+
+    <script>
+        let orang = {
+            namaDepan: 'Petrus',
+            namaBelakang: 'Darius',
+            warnaMata: 'Merah',
+            namaLengkap: function() {
+                return this.namaDepan + ' ' + this.namaBelakang;
+            }
+        }
+        document.getElementById('namaLengkap').innerHTML= orang.namaLengkap();
+
+
+        // merubah obj jadi array
+        let arrayOrang = Object.values(orang);
+        document.getElementById('dataarray').innerHTML = arrayOrang
+; //dapat ditambahkan index untuk mengambil data didalam array
+    </script>
+
+    
+</body>
+</html>
