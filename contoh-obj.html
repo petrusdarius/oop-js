@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh object HTML</title>
+</head>
+<body>
+    <p id="hasil"></p>
+
+    <script>
+        let orang = {
+            namaDepan: 'Petrus',
+            namaBelakang: 'Darius',
+            warnaMata: 'Merah'
+        }
+
+        orang.kebangsaan = 'Indonesia';
+        const hasil = document.getElementById('hasil');
+        hasil.innerHTML= "Nama lengkap: " + orang.namaDepan + " " + orang.namaBelakang + '<br> Kebangsaan: ' + orang.kebangsaan
+    </script>
+</body>
+</html>
