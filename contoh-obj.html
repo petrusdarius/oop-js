@@ -7,6 +7,7 @@
 </head>
 <body>
     <p id="hasil"></p>
+    <p id="hasil2"></p>
 
     <script>
         let orang = {
@@ -16,8 +17,22 @@
         }
 
         orang.kebangsaan = 'Indonesia';
+        delete orang.warnaMata; //menghapus properti didalam objek
         const hasil = document.getElementById('hasil');
         hasil.innerHTML= "Nama lengkap: " + orang.namaDepan + " " + orang.namaBelakang + '<br> Kebangsaan: ' + orang.kebangsaan
+
+
+        let pesan = '';
+        let id;
+        for(id in orang) {
+            pesan = pesan + orang[id] + ' ';
+            console.log('id = ' + id)
+            // console.log('orang ')
+        }
+        console.log(orang['namaDepan']);
+        const hasil2 = document.getElementById('hasil');
+        hasil2.innerHTML = pesan;
+
     </script>
 </body>
 </html>
