@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Class</title>
+</head>
+<body>
+    <p>Ini adalah contoh class dalam JS</p>
+    <p id="hasil"></p>
+
+    <script>
+        class Mahasiswa {
+            //constructor digunakan untuk melakukan inisialisasi atribut, object
+            constructor(nim, namaDepan, namaBelakang, umur) {
+                this.nim = nim;
+                this.namaDepan = namaDepan;
+                this.namaBelakang = namaBelakang;
+                this.umur = umur; //yang bagian this adalah milik atribut mahasiswa, sedangkan yang kanannya =, adalah method didala, constructor
+
+            } 
+        }
+
+
+        // cara mengakses
+        // 1. bikin class
+        objMhs = new Mahasiswa ('007', 'James', 'Bond', 21);
+        // guna new adalah utk membangun obj dan membangkitkan constructor sehingga new pasti memiliki copian dari dalam constructor
+        const hasil = document.getElementById('hasil');
+        let dataMhs1= 'NIM = ' + objMhs.nim +  '<br>Nama Depan = ' + objMhs.namaDepan + '<br> umur = ' + objMhs.umur;
+
+        objMhs2 = new Mahasiswa('006', 'Johnny', 'English', 22);
+        let dataMhs2 = "<hr>" + 
+        'NIM = ' + objMhs2.nim + "<br>" +
+        '<br>Nama Depan = ' + objMhs2.namaDepan + '<br> umur = ' + objMhs2.umur;
+
+        hasil.innerHTML = dataMhs1 + dataMhs2;
+    </script>
+</body>
+</html>
