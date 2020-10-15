@@ -16,23 +16,41 @@
                 this.judulBuku = judulBuku;
                 this.pengarang = pengarang;
             }
+
+            get getIDbuku() {
+                return this.idBuku;
+            }
+
+            get getJudulBuku() {
+                return this.judulBuku;
+            }
+
+            get getPengarang() {
+                return this.pengarang;
+            }
+
+            tampil = () => {
+                return this.getPengarang
+            }
         }
 
         objBuku = new buku('01', 'Inferno', 'James Brown');
         const hasil = document.getElementById('hasil');
 
         let dataBuku1 = 
-        'ID buku = ' + objBuku.idBuku +
-        '<br>Judul Buku = ' + objBuku.judulBuku +
-        '<br>Pengarang =  ' + objBuku.pengarang;
+        'ID buku = ' + objBuku.getIDbuku +
+        '<br>Judul Buku = ' + objBuku.getJudulBuku +
+        '<br>Pengarang =  ' + objBuku.getPengarang;
 
         objBuku2 = new buku('02', 'Harry Potter', 'J.K. Rowling');
         let dataBuku2 = '<hr>' +
-        'ID buku = ' + objBuku2.idBuku +
-        '<br>Judul Buku = ' + objBuku2.judulBuku +
-        '<br>Pengarang =  ' + objBuku2.pengarang;
+        'ID buku = ' + objBuku2.getIDbuku +
+        '<br>Judul Buku = ' + objBuku2.getJudulBuku +
+        '<br>Pengarang =  ' + objBuku2.get;
 
         hasil.innerHTML = dataBuku1 + dataBuku2;
+
+        alert(objBuku.tampil() + ' dan ' + objBuku2.tampil());
 
     </script>
 </body>
