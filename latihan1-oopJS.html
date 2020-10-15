@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1 Membuat oop</title>
+</head>
+<body>
+    <h1>Latihan 1 Pertemuan 14 (Object dan Array)</h1>
+    <p id="hasil"></p>
+
+    <script>
+        class buku {
+            constructor (idBuku, judulBuku, pengarang) {
+                this.idBuku = idBuku;
+                this.judulBuku = judulBuku;
+                this.pengarang = pengarang;
+            }
+        }
+
+        objBuku = new buku('01', 'Inferno', 'James Brown');
+        const hasil = document.getElementById('hasil');
+
+        let dataBuku1 = 
+        'ID buku = ' + objBuku.idBuku +
+        '<br>Judul Buku = ' + objBuku.judulBuku +
+        '<br>Pengarang =  ' + objBuku.pengarang;
+
+        objBuku2 = new buku('02', 'Harry Potter', 'J.K. Rowling');
+        let dataBuku2 = '<hr>' +
+        'ID buku = ' + objBuku2.idBuku +
+        '<br>Judul Buku = ' + objBuku2.judulBuku +
+        '<br>Pengarang =  ' + objBuku2.pengarang;
+
+        hasil.innerHTML = dataBuku1 + dataBuku2;
+
+    </script>
+</body>
+</html>
