@@ -19,6 +19,28 @@
                 this.umur = umur; //yang bagian this adalah milik atribut mahasiswa, sedangkan yang kanannya =, adalah method didala, constructor
 
             } 
+
+            // kl bisa buatlah 1 attribute utk 1 function
+            // method yang digunakan dalam set ini bernama setter getter
+            get getNim() {
+                return this.nim;                
+            }
+
+            get getNamaDepan() {
+                return this.namaDepan;
+            }
+
+            get getNamaBelakang() {
+                return this.namaBelakang;
+            }
+
+            get getNamaLengkap() {
+                return this.namaDepan + ' ' + this.namaBelakang;
+            }
+
+            get getUmur() {
+                return this.umur;
+            }
         }
 
 
@@ -27,12 +49,12 @@
         objMhs = new Mahasiswa ('007', 'James', 'Bond', 21);
         // guna new adalah utk membangun obj dan membangkitkan constructor sehingga new pasti memiliki copian dari dalam constructor
         const hasil = document.getElementById('hasil');
-        let dataMhs1= 'NIM = ' + objMhs.nim +  '<br>Nama Depan = ' + objMhs.namaDepan + '<br> umur = ' + objMhs.umur;
+        let dataMhs1= 'NIM = ' + objMhs.getNim+  '<br>Nama Depan = ' + objMhs.getNamaDepan + '<br> umur = ' + objMhs.getUmur;
 
         objMhs2 = new Mahasiswa('006', 'Johnny', 'English', 22);
         let dataMhs2 = "<hr>" + 
-        'NIM = ' + objMhs2.nim + "<br>" +
-        '<br>Nama Depan = ' + objMhs2.namaDepan + '<br> umur = ' + objMhs2.umur;
+        'NIM = ' + objMhs2.getNim + "<br>" +
+        '<br>Nama Depan = ' + objMhs2.getNamaDepan + '<br> umur = ' + objMhs2.getUmur;
 
         hasil.innerHTML = dataMhs1 + dataMhs2;
     </script>
