@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buku</title>
+	<!--Petrus Darius Adidharma-->
+</head>
+<body>
+    
+    <p id="hasil"></p>
+
+    <script>
+        class Buku {
+            constructor(judul) {
+                this.judulBuku = judul;
+            }
+
+            tampilkan() {
+                return 'Judul buku ini adalah ' + this.judulBuku;
+            }
+        }
+
+        class Pengarang extends Buku {
+            constructor(judul, pengarang) {
+                super(judul);
+                this.pengarang=pengarang;
+            }
+
+            show() {
+                return this.tampilkan() + ', pengarangnya adalah ' + this.pengarang;
+            }
+        }
+
+        let buku = new Pengarang ('Harry Potter', 'J.K. Rowling');
+
+        document.getElementById('hasil').innerHTML = buku.show();
+    </script>
+</body>
+</html>

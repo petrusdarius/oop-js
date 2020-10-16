@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>min-max</title>
+	<!--Petrus Darius Adidharma-->
+	
+	
+</head>
+<body>
+    <input type="number" placeholder="masukkan angka pertama" id='angka1'>
+
+    <br>
+
+    <input type="number" placeholder="masukkan angka kedua" id='angka2'>
+
+    <br>
+
+    <input type="number" placeholder="masukkan angka ketiga" id='angka3'>
+
+    <br>
+
+    <button onclick='jalankan()'>Jalankan!</button>
+
+    <p id="hasil"></p>
+
+    <script>
+        function jalankan() {
+            let pertama = document.getElementById('angka1').value;
+
+            let kedua = document.getElementById('angka2').value;
+
+            let ketiga = document.getElementById('angka3').value;
+
+            class bilangan {
+                constructor(pertama, kedua, ketiga) {
+                    this.pertama = pertama;
+                    this.kedua = kedua;
+                    this.ketiga = ketiga;
+                }
+
+                get getMin() {
+                    return Math.min(this.pertama,this.kedua,this.ketiga);
+                }
+
+                get getMax() {
+                    return Math.max(this.pertama,this.kedua,this.ketiga);
+                }
+            }
+
+            tigaAngka = new bilangan(pertama,kedua,ketiga);
+            const hasil = document.getElementById('hasil')
+
+            let minimum = 'Nilai minimum = ' + tigaAngka.getMin;
+            let maximum = '<hr>' + 'Nilai maximum = ' +tigaAngka.getMax;
+
+            hasil.innerHTML = minimum + maximum;
+        }
+        // class Bilangan {
+        //     constructor(tiga) {
+            
+        //     }   
+    </script>
+</body>
+</html>

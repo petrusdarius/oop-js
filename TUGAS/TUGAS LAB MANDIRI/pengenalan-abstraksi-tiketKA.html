@@ -1,0 +1,15 @@
+<script>
+    function Jumlah (jmlh) {
+        var jmlh = jmlh;
+        var totalBiaya = function () {
+            return jmlh *14000;
+        }
+
+        this.tampilBiaya = function() {
+            return totalBiaya ();
+        }
+    }
+
+    const Penumpang = new Jumlah (4);
+    console.log(Penumpang.tampilBiaya());
+</script>

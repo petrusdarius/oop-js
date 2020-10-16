@@ -1,0 +1,40 @@
+<script>
+    class Vehicle {
+        constructor (licensePlate, manufacture) {
+            this.licensePlate = licensePlate;
+            this.manufacture = manufacture;
+        }
+
+        info() {
+            console.log(`Nomor Kendaraan: ${this.license}`);
+            console.log(`Manufacture: ${this.manufacture}`);
+        }
+
+        parking() {
+            console.log(`Kendaraan ${this.licensePlate} parkir!`);
+        }
+    }
+
+    class Car extends Vehicle {
+        constructor(licensePlate, manufacture, wheels) {
+            super(licensePlate, manufacture);
+            this.wheels = wheels;
+        }
+
+        droveOff() {
+            console.log(`Kendaraan ${this.licensePlate} melaju!`);
+        }
+
+        openDoor() {
+            console.log(`Membuka pintu!`);
+        }
+
+        info() {
+            super.info();
+            console.log(`Jumlah roda: ${this.wheels}`);
+        }
+    }
+
+    const car = new Car('H121S', 'Honda', 4);
+    car.info()
+</script>
